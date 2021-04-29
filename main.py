@@ -21,6 +21,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
+@app.route('/test')
+def test():
+    return 'Hello, World!'
+
 @app.route('/get', methods=['GET'])
 def get():
     url = request.args.get('url')
